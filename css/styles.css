@@ -1,0 +1,48 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  list-style: none;
+  padding: 20px;
+}
+
+.gallery__image {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox.is-open {
+  display: flex;
+}
+
+.lightbox__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.8);
+}
+
+.lightbox__content {
+  position: relative;
+  z-index: 1;
+}
+
+.lightbox__image {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.lightbox__button {
+  position: absolute;
+  right: -10px;
+  top: -35px;
+  cursor: pointer;
+}
